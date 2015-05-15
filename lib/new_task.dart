@@ -6,12 +6,15 @@ import 'dart:html';
 @Component(selector: 'new-task')
 
 @View(
-  templateUrl: '../views/newtask.html'
+templateUrl: '../views/newtask.html'
 )
 
 class NewTask {
-  document.querySelector('#newtaskform').onSubmit((e) {
-        e.preventdefault();
-        print(e);
-      });
+  saveTask(KeyboardEvent event) {
+    if (event.keyCode == KeyCode.ENTER) {
+      InputElement e = event.target;
+      addTask(e.value);
+      e.value = null;
+    }
+  }
 }
