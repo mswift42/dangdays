@@ -11,7 +11,6 @@ class Task {
   }
   Task.fromJson(json) {
     Map data = json;
-    var sched = data['scheduled'];
     summary = data['summary'];
     timestamp = data['timestamp'];
     scheduled = data['scheduled'];
