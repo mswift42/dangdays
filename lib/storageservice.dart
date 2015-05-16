@@ -27,3 +27,8 @@ List<Task> loadFromStorage() {
   }
   return [];
 }
+
+void deleteTaskInStorage(Task task) {
+  var sl = loadFromStorage().where((i) => i.timestamp != task.timestamp);
+  window.localStorage[STORAGE_KEY] = JSON.encode(sl);
+}
