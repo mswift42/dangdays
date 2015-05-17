@@ -1,7 +1,7 @@
 library storageservice;
 
 import 'package:dangdays/task.dart' show Task, fromJson;
-import 'dart:convert'
+import 'dart:convert';
 
 final String STORAGE_KEY = 'dangdays';
 
@@ -33,4 +33,14 @@ List<Task> loadFromStorage() {
 void deleteTaskInStorage(Task task) {
   var sl = loadFromStorage().where((i) => i.timestamp != task.timestamp);
   window.localStorage[STORAGE_KEY] = JSON.encode(sl);
+}
+
+void editTaskInStorage(Task task) {
+  var sl = loadFromStorage();
+  sl.forEach((i) {
+    if (i.timestamp == task.timestamp) {
+      i.summary = task.summary;
+      i.scheduled = task.scheduled;
+    }
+  });
 }
