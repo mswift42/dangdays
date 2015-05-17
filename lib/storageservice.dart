@@ -2,6 +2,7 @@ library storageservice;
 
 import 'package:dangdays/task.dart' show Task, fromJson;
 import 'dart:convert';
+import 'dart:html';
 
 final String STORAGE_KEY = 'dangdays';
 
