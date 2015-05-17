@@ -1,6 +1,8 @@
 library new_task;
 
 import 'package:angular2/angular2.dart';
+import 'package:dangdays/task.dart' show Task;
+import 'package:dangdays/storageservice.dart' show saveToStorage;
 import 'dart:html';
 
 @Component(selector: 'new-task')
