@@ -19,4 +19,9 @@ class NewTask {
       e.value = null;
     }
   }
+  void addTask(String summary) {
+    Task t = new Task(summary);
+    saveToStorage(t);
+  }
 }
+
