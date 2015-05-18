@@ -27,4 +27,15 @@ void main() {
     addTask(t1);
     expect(allTasks().length,1);
   });
+  test('addTask inserts a Task at index 0', () {
+    Task t1 = new Task('task1');
+    Task t2 = new Task('task2');
+    setTasks([t1]);
+    addTask(t2);
+    expect(allTasks()[0].summary, 'task2');
+    Task t3 = new Task('task3');
+    addTask(t3);
+    expect(allTasks()[0].summary, 'task3');
+    expect(allTasks()[2].summary, 'task1');
+  });
 }
