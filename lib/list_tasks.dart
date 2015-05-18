@@ -9,3 +9,8 @@ import 'package:dangdays/storageservice.dart' show loadFromStorage;
 @View(
   templateUrl: '../views/listtasks.html'
 )
+
+
+class ListTasks {
+  List<Task> tasks = loadFromStorage();
+}
