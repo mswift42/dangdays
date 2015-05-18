@@ -7,7 +7,8 @@ import 'package:dangdays/storageservice.dart' show loadFromStorage;
 @Component(selector: 'list-tasks')
 
 @View(
-  templateUrl: '../views/listtasks.html'
+  templateUrl: '../views/listtasks.html',
+  directives: const[For]
 )
 
 
