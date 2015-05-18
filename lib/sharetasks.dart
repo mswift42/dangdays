@@ -12,6 +12,6 @@ List<Task> allTasks() {
   return tasks;
 }
 
-List<Task> setTasks(List<Task> other) {
+void setTasks(List<Task> other) {
   tasks = other;
 }
