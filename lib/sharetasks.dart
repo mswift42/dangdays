@@ -11,3 +11,7 @@ void addTask(Task task) {
 List<Task> allTasks() {
   return tasks;
 }
+
+List<Task> setTasks(List<Task> other) {
+  tasks = other;
+}
