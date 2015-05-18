@@ -21,7 +21,9 @@ class NewTask {
   }
   void addTask(String summary) {
     Task t = new Task(summary);
-    saveToStorage(t);
+    saveToStorage({'summary' : t.summary,
+    'timestamp' : t.timestamp,
+    'scheduled' : t.scheduled});
   }
 }
 
