@@ -7,7 +7,6 @@ void main() {
     Task t1 = new Task('task1');
     Task t2 = new Task('task2');
     setTasks([t1, t2]);
-    var tl = allTasks();
-    expect(t1[0].summary, 'task1');
+    expect(tasks.length,2);
   });
 }
