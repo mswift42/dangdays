@@ -8,3 +8,4 @@ dependencies:
   bootstrap: any
   browser: '>=0.10.0 <0.11.0'
   jquery_for_pub: any
+  test: any
