@@ -17,5 +17,7 @@ void main() {
     setTasks([t1,t2]);
     List<Task> tl = allTasks();
     expect(tl.length, 2);
+    expect(tl[0].summary, 'task1');
+    expect(tl[1].summary, 'task2');
   });
 }
