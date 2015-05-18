@@ -10,8 +10,8 @@ List<Task> tasklist = [];
 
 // add a task to tasklist. JSON encode and store said list
 // to localstorage.
-void saveToStorage(Task task) {
-  tasklist.add(task);
+void saveToStorage(item) {
+  tasklist.add(item);
   window.localStorage[STORAGE_KEY] = JSON.encode(tasklist);
 }
 
