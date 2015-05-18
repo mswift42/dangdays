@@ -8,5 +8,14 @@ void main() {
     Task t2 = new Task('task2');
     setTasks([t1, t2]);
     expect(tasks.length,2);
+    setTasks([]);
+    expect(tasks.length,0);
+  });
+  test('allTasks lists all tasks.', () {
+    Task t1 = new Task('task1');
+    Task t2 = new Task('task2');
+    setTasks([t1,t2]);
+    List<Task> tl = allTasks();
+    expect(tl.length, 2);
   });
 }
