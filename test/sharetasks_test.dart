@@ -20,4 +20,11 @@ void main() {
     expect(tl[0].summary, 'task1');
     expect(tl[1].summary, 'task2');
   });
+  test('addTask adds a Task to List tasks', () {
+    Task t1 = new Task('task1');
+    setTasks([]);
+    expect(allTasks().length,0);
+    addTask(t1);
+    expect(allTasks().length,1);
+  });
 }
