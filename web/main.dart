@@ -5,6 +5,7 @@
 
 import 'package:angular2/angular2.dart';
 import 'package:dangdays/new_task.dart';
+import 'package:dangdays/list_tasks.dart';
 
 // These imports will go away soon:
 import 'package:angular2/src/reflection/reflection.dart' show reflector;
@@ -13,5 +14,5 @@ import 'package:angular2/src/reflection/reflection_capabilities.dart' show Refle
 void main() {
   reflector.reflectionCapabilities = new ReflectionCapabilities();
   bootstrap(NewTask);
-
+  bootstrap(ListTasks);
 }
