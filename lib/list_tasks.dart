@@ -2,7 +2,7 @@ library list_tasks;
 
 import 'package:angular2/angular2.dart';
 import 'package:dangdays/task.dart' show Task;
-import 'package:dangdays/storageservice.dart' show loadFromStorage;
+import 'package:dangdays/sharetasks.dart' show allTasks;
 
 @Component(selector: 'list-tasks')
 
@@ -13,5 +13,5 @@ import 'package:dangdays/storageservice.dart' show loadFromStorage;
 
 
 class ListTasks {
-  List<Task> tasks = loadFromStorage();
+  List<Task> tasks = allTasks();
 }
