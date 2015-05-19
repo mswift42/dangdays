@@ -7,7 +7,6 @@ import 'dart:html';
 
 final String STORAGE_KEY = 'dangdays';
 
-
 // add a task to tasklist. JSON encode and store said list
 // to localstorage.
 void saveToStorage(item) {
@@ -22,10 +21,10 @@ void loadFromStorage() {
     List<Task> tasks = [];
     List stored = JSON.decode(window.localStorage[STORAGE_KEY]);
     stored.forEach((i) {
-          Task t = new Task.fromJson(i);
-          tasks.add(t);
-        });
-     st.setTasks(tasks);
+      Task t = new Task.fromJson(i);
+      tasks.add(t);
+    });
+    st.setTasks(tasks);
   }
 }
 
@@ -36,7 +35,8 @@ void deleteTaskInStorage(Task task) {
   window.localStorage[STORAGE_KEY] = JSON.encode(sl);
   st.setTasks(sl);
 }
-// edit a in localstorage stored task.
+// edit a in localstorage stored task, assign the edited
+// list to the global tasklist.
 void editTaskInStorage(Task task) {
   var sl = st.allTasks();
   sl.forEach((i) {
