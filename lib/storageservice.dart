@@ -34,6 +34,7 @@ void loadFromStorage() {
 void deleteTaskInStorage(Task task) {
   var sl = st.allTasks().where((i) => i.timestamp != task.timestamp);
   window.localStorage[STORAGE_KEY] = JSON.encode(sl);
+  st.setTasks(sl);
 }
 // edit a in localstorage stored task.
 void editTaskInStorage(Task task) {
