@@ -13,6 +13,7 @@ class Task {
     Map data = json;
     summary = data['summary'];
     timestamp = data['timestamp'];
-    scheduled = data['scheduled'];
+    var sched = data['scheduled'];
+    scheduled = (sched == 'null') ? null : new DateTime(sched);
   }
 }
