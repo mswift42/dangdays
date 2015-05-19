@@ -15,8 +15,9 @@ void saveToStorage(item) {
   window.localStorage[STORAGE_KEY] = JSON.encode(st.allTasks());
 }
 
-// load the under key STORAGE_KEY stored tasklist.
-List<Task> loadFromStorage() {
+// load the under key STORAGE_KEY stored tasklist,
+// then set the tasklist in the sharetask service to said list.
+void loadFromStorage() {
   if (window.localStorage.containsKey(STORAGE_KEY)) {
     List<Task> tasks = [];
     List stored = JSON.decode(window.localStorage[STORAGE_KEY]);
@@ -24,9 +25,8 @@ List<Task> loadFromStorage() {
           Task t = new Task.fromJson(i);
           tasks.add(t);
         });
-    return tasks;
+     st.setTasks(tasks);
   }
-  return [];
 }
 
 // delete the task in stored tasklist, which timestamp is identical
