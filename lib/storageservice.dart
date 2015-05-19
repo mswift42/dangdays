@@ -10,7 +10,7 @@ final String STORAGE_KEY = 'dangdays';
 // add a task to tasklist. JSON encode and store said list
 // to localstorage.
 void saveToStorage(item) {
-  st.addTask(item);
+//  st.addTask(item);
   window.localStorage[STORAGE_KEY] = JSON.encode(st.allTasks());
 }
 

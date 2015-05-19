@@ -3,6 +3,7 @@ library new_task;
 import 'package:angular2/angular2.dart';
 import 'package:dangdays/task.dart' show Task;
 import 'package:dangdays/storageservice.dart' show saveToStorage;
+import 'package:dangdays/sharetasks.dart' show insertTask;
 import 'dart:html';
 
 @Component(selector: 'new-task')
@@ -21,6 +22,7 @@ class NewTask {
   }
   void addTask(String summary) {
     Task t = new Task(summary);
+    insertTask(t);
     saveToStorage({'summary' : t.summary,
     'timestamp' : t.timestamp,
     'scheduled' : t.scheduled});

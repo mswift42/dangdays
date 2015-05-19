@@ -4,7 +4,7 @@ import 'package:dangdays/task.dart' show Task;
 
 List<Task> tasks = [];
 
-void addTask(Task task) {
+void insertTask(Task task) {
   tasks.insert(0, task);
 }
 
