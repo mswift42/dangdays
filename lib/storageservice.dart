@@ -32,7 +32,7 @@ void loadFromStorage() {
 // delete the task in stored tasklist, which timestamp is identical
 // to the given task.
 void deleteTaskInStorage(Task task) {
-  var sl = loadFromStorage().where((i) => i.timestamp != task.timestamp);
+  var sl = st.allTasks().where((i) => i.timestamp != task.timestamp);
   window.localStorage[STORAGE_KEY] = JSON.encode(sl);
 }
 // edit a in localstorage stored task.
