@@ -15,3 +15,13 @@ List<Task> allTasks() {
 void setTasks(List<Task> other) {
   tasks = other;
 }
+
+List serializeTasks(List<Task> tasks) {
+  List ser = [];
+  tasks.forEach((i) {
+    ser.add({'summary' : i.summary,
+    'timestamp' : i.timestamp,
+    'scheduled' : i.scheduled});
+  });
+  return ser;
+}
