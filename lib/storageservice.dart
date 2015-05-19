@@ -1,12 +1,12 @@
 library storageservice;
 
 import 'package:dangdays/task.dart' show Task, fromJson;
+import 'package:dangdays/sharetasks.dart' as st;
 import 'dart:convert';
 import 'dart:html';
 
 final String STORAGE_KEY = 'dangdays';
 
-List<Task> tasklist = [];
 
 // add a task to tasklist. JSON encode and store said list
 // to localstorage.
