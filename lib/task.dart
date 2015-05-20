@@ -14,6 +14,6 @@ class Task {
     summary = data['summary'];
     timestamp = data['timestamp'];
     var sched = data['scheduled'];
-    scheduled = (sched == 'null') ? null : new DateTime(sched);
+    scheduled = (sched == 'null') ? null : sched;
   }
 }
