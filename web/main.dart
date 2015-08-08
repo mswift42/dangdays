@@ -8,12 +8,9 @@ import 'package:dangdays/new_task.dart';
 import 'package:dangdays/list_tasks.dart';
 import 'package:dangdays/storageservice.dart' show loadFromStorage;
 
-// These imports will go away soon:
-import 'package:angular2/src/reflection/reflection.dart' show reflector;
-import 'package:angular2/src/reflection/reflection_capabilities.dart' show ReflectionCapabilities;
+import 'package:angular2/bootstrap.dart';
 
 void main() {
-  reflector.reflectionCapabilities = new ReflectionCapabilities();
   loadFromStorage();
   bootstrap(NewTask);
   bootstrap(ListTasks);
