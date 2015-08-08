@@ -9,7 +9,7 @@ import 'dart:html';
 @Component(selector: 'new-task')
 
 @View(
-templateUrl: '../views/newtask.html'
+templateUrl: '../web/views/newtask.html'
 )
 
 class NewTask {
