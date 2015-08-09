@@ -12,6 +12,8 @@ void main() {
     expect(t2.summary, 'task2');
     expect(t2.scheduled, isNotNull);
     expect((t2.timestamp != t2.scheduled), true);
+    expect(t1.done, false);
+    expect(t2.done, false);
   });
   test('fromJson constructs new Tasks from JSON objects', () {
     var t1 = {'summary' : 'task1', 'scheduled' : 'null'};
