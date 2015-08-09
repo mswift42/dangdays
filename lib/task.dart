@@ -5,9 +5,11 @@ class Task {
   DateTime scheduled;
   int timestamp;
   Set<String> taskcategories = new Set();
+  bool done;
 
   Task(this.summary, [this.scheduled = null]) {
     this.timestamp = new DateTime.now().millisecondsSinceEpoch;
+    this.done = false;
   }
   Task.fromJson(json) {
     Map data = json;
@@ -15,5 +17,6 @@ class Task {
     timestamp = data['timestamp'];
     var sched = data['scheduled'];
     scheduled = (sched == 'null') ? null : sched;
+    done = data['done'];
   }
 }
