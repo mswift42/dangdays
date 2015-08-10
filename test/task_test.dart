@@ -16,9 +16,11 @@ void main() {
     expect(t2.done, false);
   });
   test('fromJson constructs new Tasks from JSON objects', () {
-    var t1 = {'summary' : 'task1', 'scheduled' : 'null'};
+    var t1 = {'summary' : 'task1', 'scheduled' : 'null',
+    "done": false};
     Task task1 = new Task.fromJson(t1);
     expect(task1.summary, 'task1');
     expect(task1.scheduled, null);
+    expect(task1.done, false);
   });
 }

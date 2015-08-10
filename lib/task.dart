@@ -4,7 +4,7 @@ class Task {
   String summary;
   DateTime scheduled;
   int timestamp;
-  Set<String> taskcategories = new Set();
+  Set<String> taskCategories = new Set();
   bool done;
 
   Task(this.summary, [this.scheduled = null]) {
