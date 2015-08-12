@@ -16,7 +16,8 @@ class NewTask {
   saveTask(KeyboardEvent event) {
     if (event.keyCode == KeyCode.ENTER) {
       InputElement e = event.target;
-      addTask(e.value);
+      Task task = new Task(e.value);
+      insertTask(task);
       e.value = null;
     }
   }

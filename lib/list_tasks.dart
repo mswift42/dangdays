@@ -14,4 +14,8 @@ import 'package:dangdays/sharetasks.dart' show tasks;
 
 class ListTasks {
   List<Task> tasklist = tasks;
+
+  void addTask(Task task) {
+    tasklist.add(task);
+  }
 }
