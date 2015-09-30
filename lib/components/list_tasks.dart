@@ -1,8 +1,8 @@
 library list_tasks;
 
-import 'package:angular2/angular2.dart';
-import 'package:dangdays/task.dart' show Task;
-import 'package:dangdays/sharetasks.dart' show tasks;
+import '../../packages/angular2/angular2.dart';
+import '../task.dart' show Task;
+import '../sharetasks.dart' show tasks;
 
 @Component(selector: 'list-tasks')
 

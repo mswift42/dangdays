@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 import 'dart:html';
-import 'package:dangdays/list_tasks.dart';
+import 'package:dangdays/components/list_tasks.dart';
 import 'package:angular2/angular2.dart';
 
 import 'package:angular2/src/reflection/reflection.dart' show reflector;

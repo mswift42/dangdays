@@ -1,9 +1,9 @@
 library new_task;
 
-import 'package:angular2/angular2.dart';
-import 'package:dangdays/task.dart' show Task;
-import 'package:dangdays/storageservice.dart' show saveToStorage;
-import 'package:dangdays/sharetasks.dart' show insertTask;
+import '../../packages/angular2/angular2.dart';
+import '../task.dart' show Task;
+import '../storageservice.dart' show saveToStorage;
+import '../sharetasks.dart' show insertTask, tasks, setTasks;
 import 'dart:html';
 
 @Component(selector: 'new-task')
@@ -18,6 +18,8 @@ class NewTask {
       InputElement e = event.target;
       Task task = new Task(e.value);
       insertTask(task);
+      setTasks(tasks);
+      print(tasks);
       e.value = null;
     }
   }
