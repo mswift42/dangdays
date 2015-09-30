@@ -1,6 +1,6 @@
 library new_task;
 
-import '../../packages/angular2/angular2.dart';
+import 'package:angular2/angular2.dart';
 import '../task.dart' show Task;
 import '../storageservice.dart' show saveToStorage;
 import '../sharetasks.dart' show insertTask, tasks, setTasks;
@@ -9,7 +9,7 @@ import 'dart:html';
 @Component(selector: 'new-task')
 
 @View(
-templateUrl: '../web/views/newtask.html'
+templateUrl: 'newtask.html'
 )
 
 class NewTask {

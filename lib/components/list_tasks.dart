@@ -1,13 +1,13 @@
 library list_tasks;
 
-import '../../packages/angular2/angular2.dart';
+import 'package:angular2/angular2.dart';
 import '../task.dart' show Task;
 import '../sharetasks.dart' show tasks;
 
 @Component(selector: 'list-tasks')
 
 @View(
-  templateUrl: '../web/views/listtasks.html',
+  templateUrl: 'listtasks.html',
   directives: const[NgFor]
 )
 
